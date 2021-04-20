@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转太极图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: pink;
+        }
+
+        .circleblack {
+            width: 400px;
+            height: 400px;
+            background: #000;
+            margin: 200px auto;
+            border-radius: 50%;
+            position: relative;
+            animation: move 5s infinite linear;
+        }
+
+        .circlewhite {
+            width: 200px;
+            height: 400px;
+            background: white;
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
+            position: absolute;
+            right: 0;
+        }
+
+        .midcircleblack {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            background: black;
+        }
+
+        .midcirclewhite {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            background: white;
+        }
+
+        .smacircleblack {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            left: 170px;
+            bottom: 70px;
+            background: black;
+        }
+
+        .smacirclewhite {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            left: 170px;
+            top: 70px;
+            background: white;
+        }
+
+        @keyframes move {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circleblack">
+        <div class="circlewhite"></div>
+        <div class="midcircleblack"></div>
+        <div class="midcirclewhite"></div>
+        <div class="smacircleblack"></div>
+        <div class="smacirclewhite"></div>
+    </div>
+</body>
+
+</html>
